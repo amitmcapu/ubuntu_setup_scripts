@@ -56,3 +56,22 @@ brave-browser --version
 sudo apt-get update
 sudo apt-get install terminator
 ```
+
+## Add Github SSH keys 
+
+```
+ssh-keygen -t rsa -b 4096 -C "amit.mca.pu@gmail.com"     # Generate a new SSH key pair
+
+eval "$(ssh-agent -s)"                                   # Start SSH agent
+
+ssh-add ~/.ssh/id_rsa                                    # Add your private key to SSH agent
+
+cat ~/.ssh/id_rsa.pub                                    # Copy your public key to clipboard
+                                
+https://github.com/settings/keys                         # Add your SSH key here in github
+
+```
+
+
+
+
